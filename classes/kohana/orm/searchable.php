@@ -14,7 +14,7 @@ abstract class Kohana_ORM_Searchable extends ORM {
 
   	public function get_identifier()
 	{
-		return $this->primary_val();
+		return $this->pk();
 	}
 
 	public function get_type()
