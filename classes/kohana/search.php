@@ -191,11 +191,11 @@ class Kohana_Search {
 
 		if (sizeof($hits) == 0)
 		{
-			Kohana_Log::instance()->add('error', 'No index entry found for id '.$item->get_unique_identifier())->write();
+			Kohana_Log::instance()->add(Log::ERROR, 'No index entry found for id '.$item->get_unique_identifier())->write();
 		}
 		elseif (sizeof($hits) > 1)
 		{
-			Kohana_Log::instance()->add('error', 'Non-unique Identifier - More than one record was returned')->write();
+			Kohana_Log::instance()->add(Log::ERROR, 'Non-unique Identifier - More than one record was returned')->write();
 		}
 		elseif (sizeof($hits) == 1)
 		{
