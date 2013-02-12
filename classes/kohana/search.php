@@ -164,6 +164,22 @@ class Kohana_Search {
 
 		return $this;
 	}
+        
+        /**
+         * 
+         * @param type $item
+         */
+        public function create($item) {
+            $this->add($item);
+        }
+        
+        /**
+         * 
+         * @param type $item
+         */
+        public function save($item) {
+            $this->add($item);
+        }
 
 	/**
 	 * Update an entry. We must first remove the entry from the index, then 
