@@ -35,7 +35,7 @@ class Kohana_Search {
 	 */
 	protected function __construct($index_name)
 	{
-		$this->_config = Kohana::config('search');
+		$this->_config = Kohana::$config->load('search');
 		$this->_index_path = $this->_base_index_path($this->_config['index_path']);
 		$this->_index_name = $index_name;
 

@@ -69,7 +69,7 @@ class Kohana_Search_Index {
 
 	protected function _get_index_path($name)
 	{
-		$index = Kohana::config('search.index_path');
+		$index = Kohana::$config->load('search.index_path');
 		return $index.DIRECTORY_SEPARATOR.$name;
 	}
 
